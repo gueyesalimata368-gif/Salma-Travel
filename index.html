@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salma Travel — Votre agence de voyage sur mesure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 2v1.5l3.5-1 3.5 1V21l-2.5-2v-5.5z"/>
+        </svg>
+      </span>
+      Salma<span>Travel</span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#destinations">Destinations</a>
+      <a href="#services">Services</a>
+      <a href="#a-propos">À propos</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#contact" class="nav-cta">Réserver un appel</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO — boarding pass -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Agence de voyage indépendante</p>
+        <h1>Un voyage se prépare<br> comme un <em>départ</em>,<br>pas comme une <em>fuite</em>.</h1>
+        <p class="hero-sub">Salma conçoit des itinéraires sur mesure, pensés pour vous — pas pour la foule. Du premier appel jusqu'à l'atterrissage.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Planifier mon voyage</a>
+          <a href="#destinations" class="btn btn-ghost">Voir les destinations</a>
+        </div>
+      </div>
+
+      <div class="boarding-pass" id="boarding-pass">
+        <div class="bp-main">
+          <div class="bp-row bp-top">
+            <span class="bp-brand">SALMA TRAVEL</span>
+            <span class="bp-class">CLASSE&nbsp;SUR&nbsp;MESURE</span>
+          </div>
+
+          <div class="bp-route">
+            <div class="bp-city">
+              <span class="bp-code">ICI</span>
+              <span class="bp-label">Votre quotidien</span>
+            </div>
+            <div class="bp-plane" aria-hidden="true">✈️</div>
+            <div class="bp-city bp-city-right">
+              <span class="bp-code">RÊV</span>
+              <span class="bp-label">Destination de rêve</span>
+            </div>
+          </div>
+
+          <div class="bp-details">
+            <div class="bp-field">
+              <span class="bp-field-label">Passager</span>
+              <span class="bp-field-value">Salma — Fondatrice</span>
+            </div>
+            <div class="bp-field">
+              <span class="bp-field-label">Vol</span>
+              <span class="bp-field-value">ST&nbsp;001</span>
+            </div>
+            <div class="bp-field">
+              <span class="bp-field-label">Embarquement</span>
+              <span class="bp-field-value">Dès votre premier message</span>
+            </div>
+          </div>
+
+          <div class="bp-photo">
+            <img src="photo.jpg" alt="Salma, fondatrice de Salma Travel" class="avatar-placeholder">
+          </div>
+        </div>
+
+        <div class="bp-stub">
+          <div class="bp-stub-code">ST · 001</div>
+          <div class="bp-barcode" aria-hidden="true"></div>
+          <div class="bp-stub-text">GARDEZ CE BILLET</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Maroc</span><span>·</span><span>Bali</span><span>·</span><span>Santorin</span><span>·</span><span>Zanzibar</span><span>·</span><span>Kyoto</span><span>·</span><span>Lisbonne</span><span>·</span>
+      <span>Maroc</span><span>·</span><span>Bali</span><span>·</span><span>Santorin</span><span>·</span><span>Zanzibar</span><span>·</span><span>Kyoto</span><span>·</span><span>Lisbonne</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- À PROPOS -->
+  <section class="about" id="a-propos">
+    <div class="about-inner">
+      <div class="about-photo">
+        <img src="photo.jpg" alt="Salma, fondatrice de Salma Travel" class="avatar-placeholder avatar-large">
+        <div class="stamp-badge">
+          <span>7 ans</span>
+          <span>d'expérience</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">À propos</p>
+        <h2>Bonjour, je suis Salma.</h2>
+        <p>J'ai fondé cette agence après avoir organisé, un peu par accident, le voyage de noces de ma meilleure amie. Depuis, je conçois des itinéraires pour des voyageurs qui veulent autre chose qu'un forfait tout compris — des trajets pensés, des adresses choisies, un rythme qui leur ressemble.</p>
+        <p>Pas de catalogue figé. Chaque dossier commence par une conversation, pas par une brochure.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">180+</span>
+            <span class="stat-label">voyages conçus</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">34</span>
+            <span class="stat-label">pays couverts</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4.9/5</span>
+            <span class="stat-label">satisfaction client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-head">
+      <p class="eyebrow">Ce que je propose</p>
+      <h2>Trois façons de voyager,<br>une seule attention aux détails.</h2>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="stamp">SUR&nbsp;MESURE</div>
+        <h3>Voyages personnalisés</h3>
+        <p>Itinéraire construit de zéro autour de vos envies, votre budget et votre rythme.</p>
+      </article>
+      <article class="service-card">
+        <div class="stamp">LUNE&nbsp;DE&nbsp;MIEL</div>
+        <h3>Voyages de noces</h3>
+        <p>Des adresses romantiques et confidentielles, loin des circuits touristiques.</p>
+      </article>
+      <article class="service-card">
+        <div class="stamp">EN&nbsp;FAMILLE</div>
+        <h3>Séjours en famille</h3>
+        <p>Des étapes pensées pour petits et grands, sans temps mort ni stress logistique.</p>
+      </article>
+      <article class="service-card">
+        <div class="stamp">SOLO</div>
+        <h3>Escapades en solo</h3>
+        <p>Un accompagnement rassurant pour voyager seul(e), en toute liberté.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations" id="destinations">
+    <div class="section-head">
+      <p class="eyebrow">Destinations coup de cœur</p>
+      <h2>Quelques idées pour commencer à rêver.</h2>
+    </div>
+    <div class="destinations-grid">
+      <article class="dest-card dest-1">
+        <span class="dest-code">MRK</span>
+        <h3>Marrakech, Maroc</h3>
+        <p>Riads secrets et souks à l'aube.</p>
+      </article>
+      <article class="dest-card dest-2">
+        <span class="dest-code">DPS</span>
+        <h3>Bali, Indonésie</h3>
+        <p>Rizières, temples et villas cachées.</p>
+      </article>
+      <article class="dest-card dest-3">
+        <span class="dest-code">JTR</span>
+        <h3>Santorin, Grèce</h3>
+        <p>Couchers de soleil sur la caldeira.</p>
+      </article>
+      <article class="dest-card dest-4">
+        <span class="dest-code">ZNZ</span>
+        <h3>Zanzibar, Tanzanie</h3>
+        <p>Eaux turquoise et épices locales.</p>
+      </article>
+      <article class="dest-card dest-5">
+        <span class="dest-code">KIX</span>
+        <h3>Kyoto, Japon</h3>
+        <p>Temples, jardins zen et thé matcha.</p>
+      </article>
+      <article class="dest-card dest-6">
+        <span class="dest-code">LIS</span>
+        <h3>Lisbonne, Portugal</h3>
+        <p>Ruelles pastel et fado le soir.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="testimonials" id="temoignages">
+    <div class="section-head">
+      <p class="eyebrow">Ils ont voyagé avec Salma</p>
+      <h2>Ce qu'on en dit</h2>
+    </div>
+    <div class="testimonial-track" id="testimonial-track">
+      <blockquote class="testimonial-card">
+        <p>Salma a pensé à des détails auxquels je n'aurais jamais pensé moi-même. Notre voyage de noces à Santorin était parfait.</p>
+        <footer>— Inès &amp; Karim</footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <p>Un vrai gain de temps et de stress. J'ai eu l'impression d'avoir une amie experte en voyages plutôt qu'une agence.</p>
+        <footer>— Yasmine B.</footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <p>Notre séjour en famille à Bali était rythmé juste comme il fallait. Les enfants n'ont pas eu un seul moment d'ennui.</p>
+        <footer>— Famille Ait Ali</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-copy">
+        <p class="eyebrow">Commençons</p>
+        <h2>Racontez-moi le voyage<br>que vous n'osez pas encore imaginer.</h2>
+        <p>Répondez à quelques questions, je reviens vers vous sous 48h avec une première proposition.</p>
+      </div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
+          <span class="form-error" id="error-name"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="form-error" id="error-email"></span>
+        </div>
+        <div class="form-row">
+          <label for="destination">Destination de rêve</label>
+          <input type="text" id="destination" name="destination" placeholder="Ex : Bali, Maroc, Japon...">
+        </div>
+        <div class="form-row">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <span class="form-error" id="error-message"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande</button>
+        <p class="form-success" id="form-success" hidden>Merci ! Votre message a bien été envoyé. Salma vous répond sous 48h. ✈️</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="#top" class="logo">
+      <span class="logo-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 2v1.5l3.5-1 3.5 1V21l-2.5-2v-5.5z"/>
+        </svg>
+      </span>
+      Salma<span>Travel</span>
+    </a>
+    <div class="footer-links">
+      <a href="#destinations">Destinations</a>
+      <a href="#services">Services</a>
+      <a href="#a-propos">À propos</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="WhatsApp">WhatsApp</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Salma Travel. Tous les voyages commencent par une conversation.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
