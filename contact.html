@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Salma Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blush);
+    padding: 2em 1.5em;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 480px;
+    background: var(--paper);
+    border-radius: var(--radius);
+    padding: 2.5em 2em;
+    box-shadow: 0 30px 60px -20px rgba(110, 27, 52, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .contact-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+  }
+
+  .contact-page-title {
+    text-align: center;
+  }
+  .contact-page-title h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3em;
+  }
+  .contact-page-title p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .contact-page-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+  }
+
+  .contact-page-footer {
+    font-size: 0.85rem;
+    color: #8a6270;
+    text-align: center;
+  }
+  .contact-page-footer a {
+    color: var(--rose-dark);
+    font-weight: 600;
+  }
+
+  .btn-flex-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="contact-page">
+  <div class="contact-card">
+
+    <a href="index.html" class="contact-logo-link">
+      <span class="logo-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 2v1.5l3.5-1 3.5 1V21l-2.5-2v-5.5z"/>
+        </svg>
+      </span>
+      <span class="logo">Salma<span>Travel</span></span>
+    </a>
+
+    <div class="contact-page-title">
+      <h1>Contactez l'équipe</h1>
+      <p>Une question avant de réserver ? Écrivez-nous, nous répondons sous 48h.</p>
+    </div>
+
+    <form class="contact-page-form" id="contact-page-form" novalidate>
+      <div class="form-row">
+        <label for="cp-name">Nom</label>
+        <input type="text" id="cp-name" name="name" required>
+        <span class="form-error" id="error-cp-name"></span>
+      </div>
+      <div class="form-row">
+        <label for="cp-email">Email</label>
+        <input type="email" id="cp-email" name="email" required>
+        <span class="form-error" id="error-cp-email"></span>
+      </div>
+      <div class="form-row">
+        <label for="cp-message">Votre message</label>
+        <textarea id="cp-message" name="message" rows="4" required></textarea>
+        <span class="form-error" id="error-cp-message"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-flex-block">Envoyer le message</button>
+      <p class="form-success" id="cp-success" hidden>Merci ! Votre message a bien été envoyé. ✈️</p>
+    </form>
+
+    <p class="contact-page-footer">
+      Ou contactez-nous directement : <a href="mailto:contact@salmatravel.com">contact@salmatravel.com</a>
+    </p>
+    <p class="contact-page-footer"><a href="index.html">Retour à l'accueil</a></p>
+
+  </div>
+</div>
+
+<script>
+  const cpForm = document.getElementById('contact-page-form');
+  const cpSuccess = document.getElementById('cp-success');
+
+  function setCpError(fieldId, message) {
+    const errorEl = document.getElementById(`error-${fieldId}`);
+    if (errorEl) errorEl.textContent = message;
+  }
+
+  function isValidCpEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  cpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    const name = document.getElementById('cp-name').value.trim();
+    const email = document.getElementById('cp-email').value.trim();
+    const message = document.getElementById('cp-message').value.trim();
+
+    setCpError('cp-name', '');
+    setCpError('cp-email', '');
+    setCpError('cp-message', '');
+
+    if (name.length < 2) {
+      setCpError('cp-name', 'Merci d\'indiquer votre nom.');
+      valid = false;
+    }
+    if (!isValidCpEmail(email)) {
+      setCpError('cp-email', 'Merci d\'indiquer un email valide.');
+      valid = false;
+    }
+    if (message.length < 10) {
+      setCpError('cp-message', 'Dites-m\'en un peu plus (10 caractères min).');
+      valid = false;
+    }
+
+    if (valid) {
+      cpSuccess.hidden = false;
+      cpForm.reset();
+    }
+  });
+</script>
+
+</body>
+</html>
